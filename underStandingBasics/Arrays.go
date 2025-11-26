@@ -108,3 +108,26 @@ func mergeTwoSortedArray(arr1 []int, arr2 []int) []int {
 	}
 	return mergedArr
 }
+func FrequencyOfEachElement(arr []int) map[int]int {
+	frequencyMap := make(map[int]int)
+	for i := 0; i < len(arr); i++ {
+		value, isExists := frequencyMap[arr[i]]
+		if isExists {
+			frequencyMap[arr[i]] = value + 1
+		} else {
+			frequencyMap[arr[i]] = 1
+		}
+	}
+	return frequencyMap
+}
+func RemoveDuplicateElements(arr []int) []int {
+	seenMap := make(map[int]bool)
+	result := []int{}
+	for _, v := range arr {
+		if !seenMap[v] {
+			seenMap[v] = true
+			result = append(result, v)
+		}
+	}
+	return arr
+}
