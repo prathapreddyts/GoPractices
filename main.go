@@ -6,5 +6,5 @@ import (
 
 func main() {
 
-	underStandingBasics.FloydsTriangle(5)
+	underStandingBasics.InvertedNumberPyramid(5)
 }

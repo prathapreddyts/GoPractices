@@ -74,3 +74,29 @@ func FloydsTriangle(n int) {
 func PascalTriangle(n int) {
 
 }
+func NumberPyramid(n int) {
+	s := 1
+	for i := 0; i < n; i++ {
+		for s := 0; s < n-i-1; s++ {
+			fmt.Print(" ")
+		}
+		for j := 0; j < 2*i+1; j++ {
+			fmt.Print(s, " ")
+			s++
+		}
+		fmt.Println()
+	}
+}
+func InvertedNumberPyramid(n int) {
+	s := 2*n - 1
+	for i := 0; i < n; i++ {
+		for space := 0; space < i; space++ {
+			fmt.Print(" ")
+		}
+		for j := 0; j < 2*(n-i)-1; j++ {
+			fmt.Print(s, " ")
+			s--
+		}
+		fmt.Println()
+	}
+}
